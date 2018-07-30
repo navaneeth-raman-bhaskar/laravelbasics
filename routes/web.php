@@ -40,3 +40,4 @@ Route::get('hi/{user?}', function ($u='john'){
 
 
 Route::resource('book', 'BookController'); //several route declaration in one command
+Route::resource('books', 'BooksController'); //several route declaration in one command
