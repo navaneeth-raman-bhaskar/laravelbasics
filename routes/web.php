@@ -36,3 +36,7 @@ Route::get('hi/{user?}', function ($u='john'){
 )->where('user','[A-Za-z]+');//parametered url and pattern matching
 
 
+
+
+
+Route::resource('book', 'BookController'); //several route declaration in one command
