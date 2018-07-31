@@ -38,6 +38,11 @@ Route::get('hi/{user?}', function ($u='john'){
 
 
 
+Route::get('yr/{year}', function ($u){
+    return 'year is '.$u;})->middleware('check');// middleware is used to do certain things when this URI is given
+
+
+
 
 Route::resource('book', 'BookController'); //several route declaration in one command
 Route::resource('books', 'BooksController'); //several route declaration in one command
