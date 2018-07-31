@@ -3,8 +3,9 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Illuminate\Http\Request;
 
-class CheckYear
+class Authen
 {
     /**
      * Handle an incoming request.
@@ -13,16 +14,10 @@ class CheckYear
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle($request, Closure $next)
+    public function handle($request, Closure $next, $param)
     {
-
-        $year = ['1956','1970',"1972"];
-        if(in_array($request->year,$year)) {
-
-
-        return redirect('/');
-        }
-//        dd($next($request));
+       // dd($request->user);//this will return the input URI
+        echo "<b style='color:blue'>role: </b>".$param."<br>";
         return $next($request);
     }
 }

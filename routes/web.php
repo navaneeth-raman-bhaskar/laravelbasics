@@ -19,8 +19,8 @@ Route::get('/', function () {
 Route::view('new/hello/hi', 'users');//shortcut method to load view
 
 
-Route::get('hi/my', 'TestController@myFunction'
-)->name("nava");//loads controller function AND SAVES THE URI
+Route::get('hi/my/{id}', 'MyController@myFunction'
+)->name("nava")->where('id','[0-9]+');//parametered url and pattern matching;//loads controller function AND SAVES THE URI
 
 
 
@@ -39,10 +39,24 @@ Route::get('hi/{user?}', function ($u='john'){
 
 
 Route::get('yr/{year}', function ($u){
-    return 'year is '.$u;})->middleware('check');// middleware is used to do certain things when this URI is given
+    return 'year is '.$u;})->middleware(\App\Http\Middleware\CheckYear::class);// without register in kernel
 
 
+Route::get('yr/{year}', function ($u){
+    return 'year is '.$u;})->middleware('check');// registered in kernel
+
+
+
+Route::get('log/user', function (){
+    return "Done";})->middleware('authen:user');
+
+Route::get('log/admin', function (){
+    return "Done";})->middleware('authen:admin');
+
+Route::get('log/super', function (){
+    return "Done";})->middleware('authen:superadmin');
 
 
 Route::resource('book', 'BookController'); //several route declaration in one command
 Route::resource('books', 'BooksController'); //several route declaration in one command
+///or//  Route::resource(['book'=>'BookController','books'=>'BooksController']);
