@@ -63,3 +63,6 @@ Route::resource('books', 'BooksController'); //several route declaration in one 
 ///
 Route::get('nikku/r', 'NikeshController@req');
 Route::view('nikku/f', 'form');
+
+Route::get('cook/r', 'CookieController@cook');
+Route::view('cook/f', 'cookview');
