@@ -60,3 +60,6 @@ Route::get('log/super', function (){
 Route::resource('book', 'BookController'); //several route declaration in one command
 Route::resource('books', 'BooksController'); //several route declaration in one command
 ///or//  Route::resource(['book'=>'BookController','books'=>'BooksController']);
+///
+Route::get('nikku/r', 'NikeshController@req');
+Route::view('nikku/f', 'form');
