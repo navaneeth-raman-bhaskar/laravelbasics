@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Created by PhpStorm.
  * User: athira
@@ -14,6 +13,3 @@
     <input type="submit">
     
 </form>
-<?php
-
-?>

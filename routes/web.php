@@ -66,3 +66,8 @@ Route::view('nikku/f', 'form');
 
 Route::get('cook/r', 'CookieController@cook');
 Route::view('cook/f', 'cookview');
+
+Route::view('home', 'pages.home');
+Route::view('contact', 'pages.contact');
+
+
