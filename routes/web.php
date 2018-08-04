@@ -61,7 +61,8 @@ Route::resource('book', 'BookController'); //several route declaration in one co
 Route::resource('books', 'BooksController'); //several route declaration in one command
 ///or//  Route::resource(['book'=>'BookController','books'=>'BooksController']);
 ///
-Route::get('nikku/r', 'NikeshController@req');
+Route::post('nikku/r', 'NikeshController@req');
+Route::post('nikku/submit', 'NikeshController@validat');
 Route::view('nikku/f', 'form');
 
 Route::get('cook/r', 'CookieController@cook');
@@ -70,4 +71,6 @@ Route::view('cook/f', 'cookview');
 Route::view('home', 'pages.home');
 Route::view('contact', 'pages.contact');
 
+Auth::routes();
 
+Route::get('/home', 'HomeController@index')->name('home');

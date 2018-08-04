@@ -6,12 +6,15 @@ use Illuminate\Http\Request;
 class NikeshController extends Controller
 {
     function req(request $r){
-        $array=$r->all();
-//        dd($r->input('uname.0'));// accessing array element from form
-//dd($r->query());
-
-        $r->flashExcept('pass');
-
-      return  redirect('nikku/f');
+        if(!0) {
+            $r->flash();
+           // return redirect('nikku/f');
+        }
+    }
+    function validat(Request $request)
+    {
+echo "submission completed";
+$erro=$request->validate(['uname.0'=>'required','pass.0'=>'required','pass.1'=>'required']);
+//dd($erro);
     }
 }
