@@ -14,7 +14,7 @@ class NikeshController extends Controller
     function validat(Request $request)
     {
 echo "submission completed";
-$erro=$request->validate(['uname.0'=>'required','pass.0'=>'required','pass.1'=>'required']);
-//dd($erro);
+$request->validate(['uname.0'=>'required','pass.0'=>'required','pass.1'=>'required']);
+dd($request->all());
     }
 }

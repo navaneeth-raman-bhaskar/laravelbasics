@@ -74,3 +74,10 @@ Route::view('contact', 'pages.contact');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::view('forum','forum');
+Route::view('forum/email','auth/passwords/email')->name('email');
+Route::view('forum/reset','auth/passwords/reset')->name('reset');
+//Route::view('forum/login','auth/login')->name('login');
+//Route::view('forum/register','auth/register')->name('register');
