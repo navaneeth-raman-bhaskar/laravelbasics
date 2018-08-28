@@ -81,3 +81,23 @@ Route::view('forum/email','auth/passwords/email')->name('email');
 Route::view('forum/reset','auth/passwords/reset')->name('reset');
 //Route::view('forum/login','auth/login')->name('login');
 //Route::view('forum/register','auth/register')->name('register');
+
+
+Route::view('/dtable','Dtable');
+Route::view('/dt','ssdt');
+Route::get('/load','DController@get');
+Route::get('/many','DController@many2many');
+Route::get('/whocommented','DController@whichUserCommented');
+Route::get('/whoposted','DController@whichUserPosted');
+Route::get('/whoreplied','DController@whichUserReplied');
+Route::get('/testing','DController@testing');
+Route::get('/hmt','DController@findAllReplyToPost');
+
+
+Route::get('test',function (){
+    $coll=collect([1,2,3,4,5,'t','y']);
+    $val=$coll->each(function ($item, $key){
+return $key;
+    });
+    dd($val);
+    });

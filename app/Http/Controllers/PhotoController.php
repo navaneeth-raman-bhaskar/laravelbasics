@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Photos;
+use App\Comment;
 use Illuminate\Http\Request;
 
 class PhotoController extends Controller
@@ -41,10 +41,10 @@ class PhotoController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Photos  $photos
+     * @param  \App\Comment  $photos
      * @return \Illuminate\Http\Response
      */
-    public function show(Photos $photos)
+    public function show(Comment $photos)
     {
         //
     }
@@ -52,10 +52,10 @@ class PhotoController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Photos  $photos
+     * @param  \App\Comment  $photos
      * @return \Illuminate\Http\Response
      */
-    public function edit(Photos $photos)
+    public function edit(Comment $photos)
     {
         //
     }
@@ -64,10 +64,10 @@ class PhotoController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Photos  $photos
+     * @param  \App\Comment  $photos
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Photos $photos)
+    public function update(Request $request, Comment $photos)
     {
         //
     }
@@ -75,10 +75,10 @@ class PhotoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Photos  $photos
+     * @param  \App\Comment  $photos
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Photos $photos)
+    public function destroy(Comment $photos)
     {
         //
     }
