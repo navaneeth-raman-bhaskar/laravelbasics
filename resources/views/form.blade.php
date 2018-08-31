@@ -13,7 +13,7 @@
         margin-left: 30px;
     }
 </style>
-<form class="myform" method="post" action="{{url('nikku/submit')}}">
+<form class="myform" method="post" action="{{url('valid/submit')}}">
   @csrf
 
 

@@ -61,9 +61,9 @@ Route::resource('book', 'BookController'); //several route declaration in one co
 Route::resource('books', 'BooksController'); //several route declaration in one command
 ///or//  Route::resource(['book'=>'BookController','books'=>'BooksController']);
 ///
-Route::post('nikku/r', 'NikeshController@req');
-Route::post('nikku/submit', 'NikeshController@validat');
-Route::view('nikku/f', 'form');
+Route::post('valid/req', 'ValidationController@req');
+Route::post('valid/submit', 'ValidationController@validat');
+Route::view('valid/form', 'form');
 
 Route::get('cook/r', 'CookieController@cook');
 Route::view('cook/f', 'cookview');
@@ -85,7 +85,7 @@ Route::view('forum/reset','auth/passwords/reset')->name('reset');
 
 Route::view('/dtable','Dtable');
 Route::view('/dt','ssdt');
-Route::get('/load','DController@get');
+Route::get('/load','DController@getNotesAsJson');
 Route::get('/many','DController@many2many');
 Route::get('/whocommented','DController@whichUserCommented');
 Route::get('/whoposted','DController@whichUserPosted');
